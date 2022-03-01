@@ -1,0 +1,173 @@
+<!--FOTO PERFIL ALUNO-->
+<div class="item">
+  <div>Avatar URL</div>
+
+  <div>
+    <input 
+      type="url" 
+      name="avatar_url" id="" 
+      placeholder="https://"
+      value="{{ membro.avatar_url }}">
+  </div>
+
+</div>
+
+<!--NOME ALUNO-->
+<div class="item">
+  <div>Nome</div>
+
+  <div>
+    <input 
+      type="text" 
+      name="name" id="" 
+      required
+      value="{{ membro.name }}"
+    >
+  </div>
+
+</div>
+
+<!--EMAIL ALUNO-->
+<div class="item">
+  <div>Email</div>
+
+  <div>
+    <input 
+      type="email" 
+      name="email" id="" 
+      placeholder="exemplo@exemplo.com"
+      value="{{ membro.email }}"
+    >
+  </div>
+
+</div>
+
+<!--DATA NASCIMENTO ALUNO-->
+<div class="item">
+  <div>Data de Nascimento</div>
+
+  <div>
+    <input 
+      type="date" 
+      name="birth" 
+      value="{{ membro.birth }}"
+    >
+  </div>
+
+</div>
+
+<!--SEXO ALUNO-->
+<div class="item">
+  <div>Sexo</div>
+
+  <div>
+    <span> 
+      <input type="radio" name="gender" id="" value="M" 
+      {% if membro.gender == "M" %}
+        checked
+      {% endif %}>
+        Masculino 
+    </span>
+
+    <span> 
+      <input type="radio" name="gender" id="" value="F"
+      {% if membro.gender == "F" %}
+        checked
+      {% endif %}> 
+      Feminino 
+    </span>
+
+  </div>
+  
+</div>
+
+<!--TIPO DE SANGUE ALUNO-->
+<div class="item">
+  <div>Tipo Sanguíneo</div>
+
+  <div>
+
+    <select name="blood">
+      <option value="A+" 
+        {% if membro.blood == "A+" %}
+          selected
+        {% endif %}>A+
+      </option>
+
+      <option value="A-" 
+        {% if membro.blood == "A-" %}
+          selected
+        {% endif %}>A-
+      </option>
+
+      <option value="B+" 
+        {% if membro.blood == "B+" %}
+          selected
+        {% endif %}>B+
+      </option>
+
+      <option value="B-" 
+        {% if membro.blood == "B-" %}
+          selected
+        {% endif %}>B-
+      </option>
+
+      <option value="AB+" 
+        {% if membro.blood == "AB+" %}
+          selected
+        {% endif %}>AB+
+      </option>
+
+      <option value="AB-" 
+        {% if membro.blood == "AB-" %}
+          selected
+        {% endif %}>AB-
+      </option>
+
+      <option value="O+" 
+        {% if membro.blood == "O+" %}
+          selected
+        {% endif %}>O+
+      </option>
+
+      <option value="O-" 
+        {% if membro.blood == "O-" %}
+          selected
+        {% endif %}>O-
+      </option>
+
+    </select>
+
+  </div>
+
+</div>
+
+<!--PESO DO ALUNO-->
+<div class="item">
+  <div>Peso (Kg)</div>
+
+  <div>
+    <input 
+      type="number" 
+      name="weight"  
+      value="{{ membro.weight }}"
+    >
+  </div>
+
+</div>
+
+<!--ALTURA DO ALUNO-->
+<div class="item">
+  <div>Altura (cm)</div>
+
+  <div>
+    <input 
+      type="number" 
+      name="height" 
+      value="{{ membro.height }}"
+    >
+  </div>
+
+</div>    
+
+<button type="submit">Salvar</button>

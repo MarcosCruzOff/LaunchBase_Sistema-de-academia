@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* variaveis padrão */
+:root {
+    --cor-gol:    #FD951F;
+    --cor-gree:   #50fa7b;
+    --cor-roxo:   #7159c1;
+    --cor-Ativado:#777;
+}
+
+/* resetando as propriedades do navegador */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    outline: none ; 
+}
+
+/* corpo do site */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--cor-roxo);
+}
+
+/* Menu */
+header {
+    background-color: white;
+    width: 100%;
+    padding: 32px;
+    text-align: center; 
+}
+
+/* ============= Links ============= */
+.links ul li{
+    display: inline;
+    margin: 0 15px;    
+}
+.links  a{    
+    font-size: 22px;
+    color: var(--cor-Ativado);
+    position: relative;
+}
+.links a:hover{
+    color: var(--cor-roxo);
+}
+.links a::after{
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-roxo);
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+}
+.links a:hover::after{
+    width: 100%;
+    transition: width 200ms ease-in-out;
+    
+}
+
+/* Link Ativado */
+.links .active {
+    color: var(--cor-roxo);
+    font-weight: bold;
+    
+}
+
+/* ============= card ============= */
+.card {
+    background-color: white;
+    width: 800px;
+    min-height: 500px;
+    margin: 45px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0px 2px 6px -2px rgba(0, 0, 0, 0.2);
+
+    /* Animar a tela */
+    
+    animation: up 200ms ease-in-out;
+}
+
+@keyframes up {
+    from{
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to{
+        opacity: 1;
+    }
+}
+/* .avatar {
+    background: url(https://source.unsplash.com/collection/8360664/exercise)no-repeat center center / cover;
+    min-height: 500px;
+    width: 400px;
+} */
+
+.detalhes {
+    padding: 32px;    
+}
+
+.detalhes .item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 16px 0;    
+}
+
+.detalhes .item:last-child {
+    border: none;
+}
+.detalhes h3,
+.detalhes .item div:nth-child(1) {
+    color: #777;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: 0.7px;
+}
+.detalhes .item div:nth-child(2) {
+    color: #555;
+    font-weight: 700;
+    font-size: 18px;
+}
+.detalhes h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--cor-roxo);
+}
+
+.detalhes .item span {
+    padding: 8px 16px;
+    background-color: var(--cor-gol);
+    border-radius: 16px;
+    color: white;
+    margin-right: 4px;
+    margin-top: 8px;
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+button[type="submit"],
+a.button {
+    padding: 8px 32px;
+    background-color: var(--cor-roxo);
+    color: white;
+    margin-top: 32px;
+    width: 100%;
+    font-size: 16px;
+}
+
+a.button {
+    display: block;
+    text-align: center;
+}
+
+/* ============= Formulário ============= */
+input {
+    width: 100%;
+    color: #555;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+input[type="radio"]{
+    width: initial;
+    margin-right: 4px;
+}
+
+input::placeholder {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+button[type="submit"] {
+    padding: 8px 32px;
+    background-color: var(--cor-roxo);
+    border-radius: 4px;
+    margin-top: 16px;
+    width: 100%;
+    color: white;
+    font-size: 16px;
+}
+
+/* ============= Formulário ============= */
+#form_delete button[type="submit"] {
+    margin-top: 8px;
+    background-color: #d30000;
+}
+
+/* INDEX TABELA */
+table {
+    font-weight: 400;
+    min-width: 420px;
+    width: 100%;
+    
+    thead {
+      display: none;
+      font-weight: 500;
+    }
+    
+    tbody {
+      tr {
+        border: 1px solid #dad6eb;
+        border-radius: 5px;
+        display: block;
+        padding: 30px;
+        margin-bottom: 30px;
+        
+        td {
+          display: block;
+          font-weight: 500;
+          padding: 5px;
+          position: relative;
+          text-align: right;
+          
+          button {
+            background: #927cfe;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px transparentize(#222, .8);
+            bottom: -30px;
+            color: #fff;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            left: 50%;
+            padding: 10px 0;
+            position: absolute;
+            transform: translate(-50%, 50%);
+            transition: background .12s ease-out;
+            width: 50%;
+            
+            &:hover,
+            &:focus {
+              background: lighten(#927cfe, 5%);
+              cursor: pointer;
+            }
+          }
+          
+          &:before {
+            color: #8a8a87;
+            content: attr(data-label);
+            font-weight: 400;
+            left: 5px;
+            position: absolute;
+          }        
+        }
+      }
+    }
+  }
+  
+  @media all and (min-width: 768px) {
+    table {
+      border: 1px solid #eee;
+      border-collapse: collapse;
+      max-width: 992px;
+      text-align: left;
+      width: 100%;
+      
+      thead {
+        display: table-header-group;
+        
+        th {
+          padding: 10px;
+        }
+      }
+      
+      tbody {
+        font-size: .875em;
+        
+        tr {
+          border: none;
+          display: table-row;
+          
+          &:nth-child(odd) {
+            background: #eee;
+          }
+          
+          td {
+            display: table-cell;
+            font-weight: 400;
+            padding: 10px;
+            text-align: left;
+            
+            button {
+              display: inline-block;
+              padding: 10px 15px;
+              position: initial;
+              transform: translate(0);
+              width: auto;
+            }
+            
+            &:before {
+              display: none;
+            }
+            
+            &:last-child {
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+  }

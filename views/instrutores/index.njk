@@ -1,0 +1,42 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+  <div class="card tabela-conteiner">
+  
+  <table width="100%">
+    <a href="/instrutores/create">Novo</a>
+    <!--CABEÇALHO DA TABELA-->
+    <thead>
+      <tr>        
+        <th>Instrutor</th>
+        <th>Atendimento</th>
+        <th>Ação</th>
+      </tr>
+    </thead>
+    <!--CORPO DA TABELA-->
+    <tbody>
+      {% for instrutor in instrutores %}
+
+        <tr>
+          
+          <td>
+            <span style="background-image:url({{instrutor.avatar_url}})"></span>
+            {{instrutor.name}}
+          </td>
+
+          <td data-label="Atendimento"> {{instrutor.services}} </td>
+
+          <td><a href="/instrutores/{{instrutor.id}}">ver</a></td>
+
+        </tr>
+
+      {% endfor %}
+
+    </tbody>
+
+  </table>  
+    
+  </div>
+  
+{% endblock content %}
