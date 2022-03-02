@@ -372,8 +372,11 @@ td:last-child {
     font-weight: 500;
     padding: 5px;
     position: relative;
-    text-align: center;
+    text-align: right;
   }
+  /* table tbody tr td:nth-child(2) {
+    height: auto;
+  } */
 
   table tbody tr td a {
     -webkit-box-shadow: 0 4px 8px rgba(34, 34, 34, 0.2);
@@ -389,19 +392,12 @@ td:last-child {
     width: 50%;
   }
 
-  table tbody tr td a:hover,
-  table tbody tr td a:focus {
-    background: #a795fe;
-    cursor: pointer;
-  }
-
   table tbody tr td::after {
     color: #8a8a87;
     content: attr(data-label);
     font-weight: 400;
     left: 5px;
     position: absolute;
-    display: none;
   }
 
   /* Alinha uma a imagem em cima do texto
