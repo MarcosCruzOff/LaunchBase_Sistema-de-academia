@@ -25,33 +25,6 @@
   ],
   "instrutores": [
     {
-      "id": 0,
-      "avatar_url": "https://cdn.maioresemelhores.com/imagens/melhores-animes-de-todos-os-tempos-segundo-os-fas-og.jpg",
-      "name": "Marcos Felipe Coutinho Cruz",
-      "birth": 673660800000,
-      "gender": "M",
-      "services": "Treinador, Natação, CROSSFIT",
-      "created_at": 1631886534927
-    },
-    {
-      "id": 1,
-      "avatar_url": "https://br.web.img3.acsta.net/newsv7/21/05/05/20/09/4075823.jpg",
-      "name": "Marcos Cruz",
-      "birth": 707961600000,
-      "gender": "M",
-      "services": "treinador",
-      "created_at": 1631886592483
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBtMG3kDfUZ43WOYJaOZcdgw0W2tlkHOoc9SThXJ3rv8G1Fzrzd-aIO5ipJOGz7toI9bY&usqp=CAU",
-      "name": "Marcos Felipe",
-      "birth": 742089600000,
-      "gender": "M",
-      "services": "treinador",
-      "created_at": 1631886638011
-    },
-    {
       "id": 4,
       "avatar_url": "https://sm.ign.com/ign_br/screenshot/default/uraraka_kzr5.jpg",
       "name": "Valentona",
