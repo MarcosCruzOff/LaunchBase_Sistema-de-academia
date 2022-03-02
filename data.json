@@ -1,17 +1,6 @@
 {
   "membros": [
     {
-      "id": 1,
-      "avatar_url": "https://s.aficionados.com.br/imagens/izuku-midoriya_cke.jpg",
-      "name": "Afonso",
-      "email": "afonso@gmail.com",
-      "birth": 187833600000,
-      "gender": "M",
-      "blood": "A-",
-      "weight": "80",
-      "height": "190"
-    },
-    {
       "id": 2,
       "avatar_url": "https://criticalhits.com.br/wp-content/uploads/2021/06/my-hero-academia-1280x720-1-910x512.jpg",
       "name": "Patriquinho",
@@ -21,6 +10,17 @@
       "blood": "AB-",
       "weight": "91",
       "height": "189"
+    },
+    {
+      "id": 3,
+      "avatar_url": "https://www.anime-planet.com/images/characters/ochako-uraraka-64813.jpg",
+      "name": "Ana",
+      "email": "anacademica@gmail.com",
+      "birth": 642902400000,
+      "gender": "F",
+      "blood": "B+",
+      "weight": "68",
+      "height": "170"
     }
   ],
   "instrutores": [
